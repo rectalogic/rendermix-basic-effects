@@ -1,0 +1,22 @@
+MaterialDef PageCurl {
+
+    MaterialParameters {
+        Texture2D sourceTex
+        Texture2D targetTex
+        Float time
+    }
+
+    Technique {
+        VertexShader GLSL100:   rendermix/MatDefs/Common/Quad.vert
+        FragmentShader GLSL100: com/rendermix/PageCurl/PageCurl.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+
+        Defines {
+            SOURCE_TEX : sourceTex
+            TARGET_TEX : targetTex
+        }
+    }
+}

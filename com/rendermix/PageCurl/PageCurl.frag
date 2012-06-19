@@ -4,8 +4,12 @@
 // http://www.opensource.org/licenses/mit-license.php
 
 varying vec2 texCoord;
+#ifdef SOURCE_TEX
 uniform sampler2D m_sourceTex;
+#endif
+#ifdef TARGET_TEX
 uniform sampler2D m_targetTex;
+#endif
 uniform float m_time; // Ranges from 0.0 to 1.0
 
 const float PI = 3.141592653589793;
@@ -56,12 +60,26 @@ vec4 seeThrough(float yc, vec2 p, mat3 rotation, mat3 rrotation) {
     vec3 point = hitPoint(hitAngle, yc, rotation * vec3(p, 1.0), rrotation);
 
     if (yc <= 0.0 && (point.x < 0.0 || point.y < 0.0 || point.x > 1.0 || point.y > 1.0)) {
+#ifdef TARGET_TEX
         return texture2D(m_targetTex, texCoord);
+#else
+        return vec4(0.0);
+#endif
     }
 
-    if (yc > 0.0) return texture2D(m_sourceTex, p);
+    if (yc > 0.0) {
+#ifdef SOURCE_TEX
+        return texture2D(m_sourceTex, p);
+#else
+        return vec4(0.0);
+#endif
+    }
 
+#ifdef SOURCE_TEX
     vec4 color = texture2D(m_sourceTex, point.xy);
+#else
+    vec4 color = vec4(0.0);
+#endif
     vec4 tcolor = vec4(0.0);
 
     return antiAlias(color, tcolor, distanceToEdge(point));
@@ -81,7 +99,11 @@ vec4 seeThroughWithShadow(float yc, vec2 p, vec3 point, mat3 rotation, mat3 rrot
 }
 
 vec4 backside(float yc, vec3 point) {
+#ifdef SOURCE_TEX
     vec4 color = texture2D(m_sourceTex, point.xy);
+#else
+    vec4 color = vec4(0.0);
+#endif
     float gray = (color.r + color.b + color.g) / 15.0;
     gray += (8.0 / 10.0) * (pow(1.0 - abs(yc / cylinderRadius), 2.0 / 10.0) / 2.0 + (5.0 / 10.0));
     color.rgb = vec3(gray);
@@ -104,7 +126,11 @@ vec4 behindSurface(float yc, vec3 point, mat3 rrotation) {
     } else
         shado = 0.0;
 
+#ifdef TARGET_TEX
     return vec4(texture2D(m_targetTex, texCoord).rgb - shado, 1.0);
+#else
+    return vec4(0.0);
+#endif
 }
 
 void main(void) {
@@ -139,7 +165,11 @@ void main(void) {
 
     if (yc > cylinderRadius) {
         // Flat surface
+#ifdef SOURCE_TEX
         gl_FragColor = texture2D(m_sourceTex, texCoord);
+#else
+        gl_FragColor = vec4(0.0);
+#endif
         return;
     }
 
@@ -167,7 +197,11 @@ void main(void) {
         shado *= 0.5;
         otherColor = vec4(0.0, 0.0, 0.0, shado);
     } else {
+#ifdef SOURCE_TEX
         otherColor = texture2D(m_sourceTex, texCoord);
+#else
+        otherColor = vec4(0.0);
+#endif
     }
 
     color = antiAlias(color, otherColor, cylinderRadius - abs(yc));
