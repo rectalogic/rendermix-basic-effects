@@ -1,0 +1,23 @@
+MaterialDef Wipe {
+
+    MaterialParameters {
+        Texture2D sourceTex
+        Texture2D targetTex
+        Texture2D lumaTex
+        Float time
+    }
+
+    Technique {
+        VertexShader GLSL100:   rendermix/MatDefs/Common/Quad.vert
+        FragmentShader GLSL100: com/rendermix/Wipe/Wipe.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+
+        Defines {
+            SOURCE_TEX : sourceTex
+            TARGET_TEX : targetTex
+        }
+    }
+}

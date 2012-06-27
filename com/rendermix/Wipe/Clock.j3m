@@ -1,0 +1,5 @@
+Material ClockWipe : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        lumaTex : Flip com/rendermix/Wipe/lumas/clock.png
+    }
+}
