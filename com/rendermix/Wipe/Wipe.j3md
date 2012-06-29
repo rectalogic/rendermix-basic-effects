@@ -4,6 +4,7 @@ MaterialDef Wipe {
         Texture2D sourceTex
         Texture2D targetTex
         Texture2D lumaTex
+        Float softness
         Float time
     }
 
@@ -18,6 +19,7 @@ MaterialDef Wipe {
         Defines {
             SOURCE_TEX : sourceTex
             TARGET_TEX : targetTex
+            LUMA_TEX : lumaTex
         }
     }
 }

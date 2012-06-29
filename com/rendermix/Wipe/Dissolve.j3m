@@ -1,0 +1,5 @@
+Material Dissolve : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        softness : 1.0
+    }
+}
