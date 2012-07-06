@@ -18,8 +18,16 @@ void main() {
     float luma = 1.0;
 #endif
 
+#ifdef SOURCE_TEX
     vec4 sourceColor = texture2D(m_SourceTex, texCoord);
+#else
+    vec4 sourceColor = vec4(0.0);
+#endif
+#ifdef TARGET_TEX
     vec4 targetColor = texture2D(m_TargetTex, texCoord);
+#else
+    vec4 targetColor = vec4(0.0);
+#endif
     float time = mix(0.0, 1.0 + m_Softness, m_Time);
 
     if (luma <= time - m_Softness)
