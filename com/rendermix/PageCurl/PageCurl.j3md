@@ -1,8 +1,8 @@
 MaterialDef PageCurl {
 
     MaterialParameters {
-        Texture2D sourceTex
-        Texture2D targetTex
+        Texture2D SourceTex
+        Texture2D TargetTex
         Float time
     }
 
@@ -15,8 +15,8 @@ MaterialDef PageCurl {
         }
 
         Defines {
-            SOURCE_TEX : sourceTex
-            TARGET_TEX : targetTex
+            SOURCE_TEX : SourceTex
+            TARGET_TEX : TargetTex
         }
     }
 }

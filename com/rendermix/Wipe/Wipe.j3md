@@ -1,11 +1,11 @@
 MaterialDef Wipe {
 
     MaterialParameters {
-        Texture2D sourceTex
-        Texture2D targetTex
-        Texture2D lumaTex
-        Float softness
-        Float time
+        Texture2D SourceTex
+        Texture2D TargetTex
+        Texture2D LumaTex
+        Float Softness
+        Float Time
     }
 
     Technique {
@@ -17,9 +17,9 @@ MaterialDef Wipe {
         }
 
         Defines {
-            SOURCE_TEX : sourceTex
-            TARGET_TEX : targetTex
-            LUMA_TEX : lumaTex
+            SOURCE_TEX : SourceTex
+            TARGET_TEX : TargetTex
+            LUMA_TEX : LumaTex
         }
     }
 }

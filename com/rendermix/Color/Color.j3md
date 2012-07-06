@@ -1,7 +1,7 @@
 MaterialDef Color {
 
     MaterialParameters {
-        Color color
+        Color Color
     }
 
     Technique {

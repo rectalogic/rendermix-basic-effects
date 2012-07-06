@@ -5,10 +5,10 @@
 
 varying vec2 texCoord;
 #ifdef SOURCE_TEX
-uniform sampler2D m_sourceTex;
+uniform sampler2D m_SourceTex;
 #endif
 #ifdef TARGET_TEX
-uniform sampler2D m_targetTex;
+uniform sampler2D m_TargetTex;
 #endif
 uniform float m_time; // Ranges from 0.0 to 1.0
 
@@ -61,7 +61,7 @@ vec4 seeThrough(float yc, vec2 p, mat3 rotation, mat3 rrotation) {
 
     if (yc <= 0.0 && (point.x < 0.0 || point.y < 0.0 || point.x > 1.0 || point.y > 1.0)) {
 #ifdef TARGET_TEX
-        return texture2D(m_targetTex, texCoord);
+        return texture2D(m_TargetTex, texCoord);
 #else
         return vec4(0.0);
 #endif
@@ -69,14 +69,14 @@ vec4 seeThrough(float yc, vec2 p, mat3 rotation, mat3 rrotation) {
 
     if (yc > 0.0) {
 #ifdef SOURCE_TEX
-        return texture2D(m_sourceTex, p);
+        return texture2D(m_SourceTex, p);
 #else
         return vec4(0.0);
 #endif
     }
 
 #ifdef SOURCE_TEX
-    vec4 color = texture2D(m_sourceTex, point.xy);
+    vec4 color = texture2D(m_SourceTex, point.xy);
 #else
     vec4 color = vec4(0.0);
 #endif
@@ -100,7 +100,7 @@ vec4 seeThroughWithShadow(float yc, vec2 p, vec3 point, mat3 rotation, mat3 rrot
 
 vec4 backside(float yc, vec3 point) {
 #ifdef SOURCE_TEX
-    vec4 color = texture2D(m_sourceTex, point.xy);
+    vec4 color = texture2D(m_SourceTex, point.xy);
 #else
     vec4 color = vec4(0.0);
 #endif
@@ -127,7 +127,7 @@ vec4 behindSurface(float yc, vec3 point, mat3 rrotation) {
         shado = 0.0;
 
 #ifdef TARGET_TEX
-    return vec4(texture2D(m_targetTex, texCoord).rgb - shado, 1.0);
+    return vec4(texture2D(m_TargetTex, texCoord).rgb - shado, 1.0);
 #else
     return vec4(0.0);
 #endif
@@ -166,7 +166,7 @@ void main(void) {
     if (yc > cylinderRadius) {
         // Flat surface
 #ifdef SOURCE_TEX
-        gl_FragColor = texture2D(m_sourceTex, texCoord);
+        gl_FragColor = texture2D(m_SourceTex, texCoord);
 #else
         gl_FragColor = vec4(0.0);
 #endif
@@ -198,7 +198,7 @@ void main(void) {
         otherColor = vec4(0.0, 0.0, 0.0, shado);
     } else {
 #ifdef SOURCE_TEX
-        otherColor = texture2D(m_sourceTex, texCoord);
+        otherColor = texture2D(m_SourceTex, texCoord);
 #else
         otherColor = vec4(0.0);
 #endif

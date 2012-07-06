@@ -1,5 +1,5 @@
 Material White : com/rendermix/Color/Color.j3md {
     MaterialParameters {
-        color : 1.0 1.0 1.0 1.0
+        Color : 1.0 1.0 1.0 1.0
     }
 }
