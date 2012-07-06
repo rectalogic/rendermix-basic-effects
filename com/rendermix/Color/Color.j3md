@@ -1,0 +1,15 @@
+MaterialDef Color {
+
+    MaterialParameters {
+        Color color
+    }
+
+    Technique {
+        VertexShader GLSL100:   rendermix/MatDefs/Common/Quad.vert
+        FragmentShader GLSL100: com/rendermix/Color/Color.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+    }
+}
