@@ -10,14 +10,14 @@ uniform sampler2D m_SourceTex;
 #ifdef TARGET_TEX
 uniform sampler2D m_TargetTex;
 #endif
-uniform float m_time; // Ranges from 0.0 to 1.0
+uniform float m_Time; // Ranges from 0.0 to 1.0
 
 const float PI = 3.141592653589793;
 
 const float MIN_AMOUNT = -0.16;
 const float MAX_AMOUNT = 1.3;
 // Sinusoidal easeOut
-float amount = sin(m_time * (PI / 2.0)) * (MAX_AMOUNT - MIN_AMOUNT) + MIN_AMOUNT;
+float amount = sin(m_Time * (PI / 2.0)) * (MAX_AMOUNT - MIN_AMOUNT) + MIN_AMOUNT;
 
 
 const float scale = 512.0;

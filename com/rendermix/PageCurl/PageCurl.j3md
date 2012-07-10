@@ -3,7 +3,7 @@ MaterialDef PageCurl {
     MaterialParameters {
         Texture2D SourceTex
         Texture2D TargetTex
-        Float time
+        Float Time
     }
 
     Technique {
