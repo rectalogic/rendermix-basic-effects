@@ -1,0 +1,6 @@
+Material FanDown : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/fan.png
+        Softness : 0.1
+    }
+}

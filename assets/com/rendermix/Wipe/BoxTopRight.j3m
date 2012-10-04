@@ -1,0 +1,6 @@
+Material BoxTopRight : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/box-topright.png
+        Softness : 0.04
+    }
+}

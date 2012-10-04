@@ -1,0 +1,6 @@
+Material LinearTopRight : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/linear-topright.png
+        Softness : 0.2
+    }
+}

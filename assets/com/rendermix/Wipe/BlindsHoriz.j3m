@@ -1,0 +1,6 @@
+Material BlindsHoriz : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/blinds-h.png
+        Softness : 0.0
+    }
+}

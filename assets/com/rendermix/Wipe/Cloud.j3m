@@ -1,0 +1,6 @@
+Material Cloud : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/cloud.png
+        Softness : 0.5
+    }
+}

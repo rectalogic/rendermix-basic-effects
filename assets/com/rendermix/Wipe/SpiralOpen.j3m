@@ -1,0 +1,6 @@
+Material SpiralOpen : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/spiral.png
+        Softness : 0.3
+    }
+}

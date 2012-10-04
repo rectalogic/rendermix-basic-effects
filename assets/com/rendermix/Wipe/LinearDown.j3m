@@ -1,0 +1,6 @@
+Material LinearDown : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/linear-v.png
+        Softness : 0.2
+    }
+}

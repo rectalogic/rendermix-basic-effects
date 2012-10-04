@@ -1,0 +1,6 @@
+Material Burst : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/burst.png
+        Softness : 0.45
+    }
+}

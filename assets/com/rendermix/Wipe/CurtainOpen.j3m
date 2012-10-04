@@ -1,0 +1,6 @@
+Material CurtainOpen : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/curtain.png
+        Softness : 0.2
+    }
+}

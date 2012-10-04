@@ -1,0 +1,6 @@
+Material Squares : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : Flip com/rendermix/Wipe/lumas/squares.png
+        Softness : 0.3
+    }
+}
