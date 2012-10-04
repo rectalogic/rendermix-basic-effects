@@ -13,7 +13,8 @@ uniform float m_Softness;
 
 void main() {
 #ifdef LUMA_TEX
-    float luma = texture2D(m_LumaTex, texCoord).x;
+    // Flip luma vertically
+    float luma = texture2D(m_LumaTex, vec2(texCoord.x, 1.0 - texCoord.y)).x;
 #else
     float luma = 1.0;
 #endif

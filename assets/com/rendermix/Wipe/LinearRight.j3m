@@ -1,6 +1,6 @@
 Material LinearRight : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/linear-h.png
+        LumaTex : com/rendermix/Wipe/lumas/linear-h.png
         Softness : 0.2
     }
 }

@@ -1,6 +1,6 @@
 Material ParallelZigZagHorizClose : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/parallel-zigzag-h.png
+        LumaTex : com/rendermix/Wipe/lumas/parallel-zigzag-h.png
         Softness : 0.04
     }
 }

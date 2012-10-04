@@ -1,6 +1,6 @@
 Material ZigZagRight : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/zigzag-v.png
+        LumaTex : com/rendermix/Wipe/lumas/zigzag-v.png
         Softness : 0.04
     }
 }

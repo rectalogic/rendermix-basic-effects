@@ -1,6 +1,6 @@
 Material CheckerboardSmall : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/checkerboard-small.png
+        LumaTex : com/rendermix/Wipe/lumas/checkerboard-small.png
         Softness : 0.0
     }
 }

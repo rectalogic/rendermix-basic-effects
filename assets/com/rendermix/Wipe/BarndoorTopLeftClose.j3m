@@ -1,6 +1,6 @@
 Material BarndoorTopLeftClose : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/barndoor-topleft.png
+        LumaTex : com/rendermix/Wipe/lumas/barndoor-topleft.png
         Softness : 0.03
     }
 }

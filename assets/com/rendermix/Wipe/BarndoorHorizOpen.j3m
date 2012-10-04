@@ -1,6 +1,6 @@
 Material barndoorHorizOpen : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/barndoor-h.png
+        LumaTex : com/rendermix/Wipe/lumas/barndoor-h.png
         Softness : 0.06
     }
 }

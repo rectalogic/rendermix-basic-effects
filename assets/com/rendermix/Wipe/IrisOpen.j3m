@@ -1,6 +1,6 @@
 Material IrisOpen : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/iris.png
+        LumaTex : com/rendermix/Wipe/lumas/iris.png
         Softness : 0.3
     }
 }

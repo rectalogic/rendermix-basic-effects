@@ -1,6 +1,6 @@
 Material Clock : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/clock.png
+        LumaTex : com/rendermix/Wipe/lumas/clock.png
         Softness : 0.03
     }
 }

@@ -1,6 +1,6 @@
 Material Clock : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/barndoor-v.png
+        LumaTex : com/rendermix/Wipe/lumas/barndoor-v.png
         Softness : 0.06
     }
 }

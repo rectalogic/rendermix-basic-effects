@@ -1,6 +1,6 @@
 Material Stripes : com/rendermix/Wipe/Wipe.j3md {
     MaterialParameters {
-        LumaTex : Flip com/rendermix/Wipe/lumas/stripes.png
+        LumaTex : com/rendermix/Wipe/lumas/stripes.png
         Softness : 0.0
     }
 }
