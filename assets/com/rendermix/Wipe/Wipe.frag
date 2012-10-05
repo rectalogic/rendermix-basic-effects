@@ -7,6 +7,7 @@ uniform sampler2D m_TargetTex;
 #endif
 #ifdef LUMA_TEX
 uniform sampler2D m_LumaTex;
+uniform bool m_InvertLuma;
 #endif
 uniform float m_Time; // Ranges from 0.0 to 1.0
 uniform float m_Softness;
@@ -15,6 +16,8 @@ void main() {
 #ifdef LUMA_TEX
     // Flip luma vertically
     float luma = texture2D(m_LumaTex, vec2(texCoord.x, 1.0 - texCoord.y)).x;
+    if (m_InvertLuma)
+        luma = 1.0 - luma;
 #else
     float luma = 1.0;
 #endif

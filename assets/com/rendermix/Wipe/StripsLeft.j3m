@@ -1,0 +1,7 @@
+Material StripsLeft : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : com/rendermix/Wipe/lumas/strips-v.png
+        InvertLuma : true
+        Softness : 0.04
+    }
+}

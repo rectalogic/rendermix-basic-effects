@@ -4,6 +4,7 @@ MaterialDef Wipe {
         Texture2D SourceTex
         Texture2D TargetTex
         Texture2D LumaTex
+        Boolean InvertLuma
         Float Softness
         Float Time
     }

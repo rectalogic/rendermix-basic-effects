@@ -1,0 +1,7 @@
+Material ZigZagUp : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : com/rendermix/Wipe/lumas/zigzag-h.png
+        InvertLuma : true
+        Softness : 0.04
+    }
+}

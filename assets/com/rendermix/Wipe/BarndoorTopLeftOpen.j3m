@@ -1,0 +1,7 @@
+Material BarndoorTopLeftOpen : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : com/rendermix/Wipe/lumas/barndoor-topleft.png
+        InvertLuma : true
+        Softness : 0.03
+    }
+}

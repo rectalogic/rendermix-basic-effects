@@ -1,0 +1,7 @@
+Material SpiralClose : com/rendermix/Wipe/Wipe.j3md {
+    MaterialParameters {
+        LumaTex : com/rendermix/Wipe/lumas/spiral.png
+        InvertLuma : true
+        Softness : 0.3
+    }
+}
