@@ -1,0 +1,24 @@
+MaterialDef Slide {
+
+    MaterialParameters {
+        Texture2D SourceTex
+        Texture2D TargetTex
+        Float TranslateX : 0.0
+        Float TranslateY : 0.0
+        Float Time
+    }
+
+    Technique {
+        VertexShader GLSL100:   rendermix/MatDefs/Common/Quad.vert
+        FragmentShader GLSL100: com/rendermix/Slide/Slide.frag
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+        }
+
+        Defines {
+            SOURCE_TEX : SourceTex
+            TARGET_TEX : TargetTex
+        }
+    }
+}

@@ -1,0 +1,5 @@
+Material Up : com/rendermix/Slide/Slide.j3md {
+    MaterialParameters {
+        TranslateY : 1.0
+    }
+}
