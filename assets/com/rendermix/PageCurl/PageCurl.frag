@@ -3,6 +3,9 @@
 // Licensed under The MIT License:
 // http://www.opensource.org/licenses/mit-license.php
 
+#define SINUSOIDAL_EASING
+#import "com/rendermix/Easing/Easing.glsllib"
+
 varying vec2 texCoord;
 #ifdef SOURCE_TEX
 uniform sampler2D m_SourceTex;
@@ -12,13 +15,9 @@ uniform sampler2D m_TargetTex;
 #endif
 uniform float m_Time; // Ranges from 0.0 to 1.0
 
-const float PI = 3.141592653589793;
-
 const float MIN_AMOUNT = -0.16;
 const float MAX_AMOUNT = 1.3;
-// Sinusoidal easeOut
-float amount = sin(m_Time * (PI / 2.0)) * (MAX_AMOUNT - MIN_AMOUNT) + MIN_AMOUNT;
-
+float amount = Sinusoidal_easeOut(0.0, 1.0, 1.0, m_Time) * (MAX_AMOUNT - MIN_AMOUNT) + MIN_AMOUNT;
 
 const float scale = 512.0;
 const float sharpness = 3.0;

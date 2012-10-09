@@ -1,0 +1,42 @@
+const float PI = 3.141592653589793;
+
+#ifdef LINEAR_EASING
+float Linear_ease(in float begin, in float change, in float duration, in float time) {
+    return change * time / duration + begin;
+}
+#endif
+
+#ifdef SINUSOIDAL_EASING
+float Sinusoidal_easeIn(in float begin, in float change, in float duration, in float time) {
+    return -change * cos(time / duration * (PI / 2.0)) + change + begin;
+}
+
+float Sinusoidal_easeOut(in float begin, in float change, in float duration, in float time) {
+    return change * sin(time / duration * (PI / 2.0)) + begin;
+}
+
+float Sinusoidal_easeInOut(in float begin, in float change, in float duration, in float time) {
+    return -change / 2.0 * (cos(PI * time / duration) - 1.0) + begin;
+}
+#endif
+
+#ifdef EXPONENTIAL_EASING
+float Exponential_easeIn(in float begin, in float change, in float duration, in float time) {
+    return time == 0.0 ? begin : change * pow(2.0, 10.0 * (time / duration - 1.0)) + begin;
+}
+
+float Exponential_easeOut(in float begin, in float change, in float duration, in float time) {
+    return time == duration ? begin + change : change * (-pow(2.0, -10.0 * time / duration) + 1.0) + begin;
+}
+
+float Exponential_easeInOut(in float begin, in float change, in float duration, in float time) {
+    if (time == 0.0)
+        return begin;
+    else if (time == duration)
+        return begin + change;
+    time = time / (duration / 2.0);
+    if (time < 1.0)
+        return change / 2.0 * pow(2.0, 10.0 * (time - 1.0)) + begin;
+    return change / 2.0 * (-pow(2.0, -10.0 * (time - 1.0)) + 2.0) + begin;
+}
+#endif
